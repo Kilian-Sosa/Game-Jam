@@ -9,10 +9,10 @@ public class KillZone : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
 
-        }
-        else
+        } 
+        else if (collision.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
+          Destroy(collision.gameObject);
         }
     }
 }
