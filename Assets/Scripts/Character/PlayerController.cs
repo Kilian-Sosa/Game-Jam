@@ -23,9 +23,14 @@ public class PlayerController : MonoBehaviour
     private int playerDamage = 1;
     private int MaxSaltos = 2;
 
+    [SerializeField] private Animator animator;
+    [SerializeField] private RuntimeAnimatorController controller;
+
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        if (animator == null )
+            animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -97,5 +102,10 @@ public class PlayerController : MonoBehaviour
             contadorSalto++;
             SetAnimation("jump");
         }
+    }
+
+    private void LevelUp()
+    {
+        animator.runtimeAnimatorController = controller;
     }
 }
