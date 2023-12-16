@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("Estadisticas")]
     private float velocidadDeMovimiento = 6;
     private float velocidadDeMovimientoReducida = 3;
-    public float fuerzaDeSalto = 5;
+    private float fuerzaDeSalto = 10;
 
     [Header("Booleanos")]
     private bool puedeMover = true;
