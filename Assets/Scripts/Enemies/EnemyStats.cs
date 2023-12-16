@@ -5,10 +5,16 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     [SerializeField] private int health = 1;
+    [SerializeField] private int experience = 20;
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if (health <= 0) Destroy(gameObject);
+        if (health <= 0)
+        {
+            GameMode.Instance.AddExperience(experience);
+            Destroy(gameObject);
+        }
     }
+
 }

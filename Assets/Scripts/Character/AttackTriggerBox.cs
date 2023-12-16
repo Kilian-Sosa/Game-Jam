@@ -24,6 +24,14 @@ public class AttackTriggerBox : MonoBehaviour
 
     public List<GameObject> GetEnemies()
     {
+        List<GameObject> enemies = new List<GameObject>(Enemies);
+        foreach (GameObject enemy in Enemies)
+        {
+            if(enemy == null)
+            {
+                Enemies.Remove(enemy);
+            }
+        }
         return Enemies;
     }
 }

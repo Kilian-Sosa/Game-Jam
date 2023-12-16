@@ -12,8 +12,11 @@ public class GameMode : MonoBehaviour
     private List<List<GameObject>> LevelFrames = new List<List<GameObject>>();
 
     [SerializeField] private GameObject currentLevelFrame;
+    [SerializeField]private GameObject previousLevelFrame;
+    [SerializeField] private GameObject BackCollisionBox;
 
     private int playerLevel;
+    private int experience;
 
     private void Awake()
     {
@@ -30,6 +33,7 @@ public class GameMode : MonoBehaviour
         LevelFrames.Add(Level3Frames);
 
         playerLevel = 0;
+        experience = 0;
     }
 
     public void PlayerLevelUp()
@@ -40,9 +44,26 @@ public class GameMode : MonoBehaviour
 
     public void GenerateNextLevelFrame()
     {
+        if (previousLevelFrame != null) Destroy(previousLevelFrame.gameObject);
+        BackCollisionBox.transform.position = currentLevelFrame.transform.position;
         Vector3 nextFrameAnchorPosition = currentLevelFrame.GetComponent<LevelFrame>().GetNextLevelAnchorPosition();
+        previousLevelFrame = currentLevelFrame;
         currentLevelFrame = Instantiate(GetNextFrameClass(), nextFrameAnchorPosition, transform.rotation);
+        AddExperience(10);
     }
+
+    public void AddExperience(int amount)
+    {
+        experience += amount;
+        int experienceNeeded = (playerLevel + 1 * 150);
+        if (experience > experienceNeeded)
+        {
+            PlayerLevelUp();
+            experience = experience % experienceNeeded;
+        }
+        Debug.Log("Experience: " + experience);
+    }
+
 
     public int getPlayerLevel()
     {

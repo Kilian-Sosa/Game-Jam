@@ -68,16 +68,15 @@ public class PlayerController : MonoBehaviour
         List<GameObject> Enemies = AttackTriggerBox.GetComponent<AttackTriggerBox>().GetEnemies();
         foreach(GameObject Enemy in Enemies)
         {
-            Enemy.GetComponent<EnemyStats>().TakeDamage(playerDamage);
+            if(Enemy) Enemy.GetComponent<EnemyStats>().TakeDamage(playerDamage);
         }
     }
 
     private void Movimiento()
     {
         float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
 
-        direccion = new Vector2(x, y);
+        direccion = new Vector2(x, 0);
         rigidBody.velocity = new Vector2(direccion.x * GetVelocity(), rigidBody.velocity.y);
         if (x != 0) transform.localScale = CalculaDireccionPlayer(x);
     }
