@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject AttackTriggerBox;
     private int playerDamage = 1;
-    private int MaxSaltos = 1;
+    private int MaxSaltos = 2;
 
     private void Awake()
     {
@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
         if(puedeMover) Movimiento();
         if (Input.GetKeyDown("space")) Saltar();
         if (Input.GetButtonDown("Fire1")) Atacar();
-        
     }
 
     private void FixedUpdate()
