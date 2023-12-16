@@ -47,11 +47,7 @@ MonoBehaviour:
   Level1Frames:
   - {fileID: 9168716448335942397, guid: 61453fcd824dac14d97d85eb208ec4fa, type: 3}
   - {fileID: 4092992959474594365, guid: 22e2c800ca3458546a86ae38ead5e3e6, type: 3}
-  - {fileID: 8435645036537742985, guid: d7baeb33f77b18e4897565426834c2d5, type: 3}
-  - {fileID: 6416616448958632564, guid: 6772888f80835a341ba7315601c2d40f, type: 3}
-  Level2Frames:
-  - {fileID: 8435645036537742985, guid: d7baeb33f77b18e4897565426834c2d5, type: 3}
-  - {fileID: 6416616448958632564, guid: 6772888f80835a341ba7315601c2d40f, type: 3}
+  Level2Frames: []
   Level3Frames:
   - {fileID: 9168716448335942397, guid: 61453fcd824dac14d97d85eb208ec4fa, type: 3}
   - {fileID: 4092992959474594365, guid: 22e2c800ca3458546a86ae38ead5e3e6, type: 3}
