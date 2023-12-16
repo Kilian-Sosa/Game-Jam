@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public int contadorSalto = 0;
 
     [SerializeField] private GameObject AttackTriggerBox;
-
+    private int playerDamage;
 
     private void Awake()
     {
@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
             Saltar();
         }
 
- 
+        if (Input.GetButtonDown("Fire1")) AplicarDmg();
+        
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -56,16 +57,16 @@ public class PlayerController : MonoBehaviour
             primerSalto = true;
         }
 
-        if (collision.gameObject.CompareTag("Enemigorl"))
-        {
-            AplicarDmg(collision.gameObject);
-        }
     }
 
 
-    private void AplicarDmg(GameObject jugador)
+    private void AplicarDmg()
     {
-        Debug.Log("DAMAGE");
+        List<GameObject> Enemies = AttackTriggerBox.GetComponent<AttackTriggerBox>().GetEnemies();
+        foreach(GameObject Enemy in Enemies)
+        {
+            Enemy.GetComponent<EnemyStats>().TakeDamage(playerDamage);
+        }
     }
 
     public void Movimiento()
