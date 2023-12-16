@@ -20,12 +20,12 @@ public class EnemySpawner : MonoBehaviour
 
     private GameObject SelectEnemy()
     {
-        switch (GameMode.Instance.getPlayerLevel())
+        return GameMode.Instance.getPlayerLevel() switch
         {
-            case 0: return Level1EnemyClass;
-            case 1: return Level2EnemyClass;
-            case 2: return Level3EnemyClass;
-            default: return Level3EnemyClass;
-        }
+            0 => Level1EnemyClass,
+            1 => Level2EnemyClass,
+            2 => Level3EnemyClass,
+            _ => Level3EnemyClass,
+        };
     }
 }
