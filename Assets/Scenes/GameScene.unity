@@ -228,6 +228,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6418184465337207084, guid: 61453fcd824dac14d97d85eb208ec4fa, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6460523864274471042, guid: 61453fcd824dac14d97d85eb208ec4fa, type: 3}
       propertyPath: Level1EnemyClass
       value: 
@@ -284,8 +288,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1_1_LevelFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 9168716448335942397, guid: 61453fcd824dac14d97d85eb208ec4fa, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8287216908088777771, guid: 61453fcd824dac14d97d85eb208ec4fa, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61453fcd824dac14d97d85eb208ec4fa, type: 3}
