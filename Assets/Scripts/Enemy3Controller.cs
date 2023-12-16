@@ -7,9 +7,9 @@ public class EnemyController : MonoBehaviour {
 
     void Update() {
         Vector2 difference = GameObject.Find("Player").transform.position - transform.position;
-
+        if (difference.x > 0) return;
         RaycastHit2D hit = Physics2D.Raycast(
-            new Vector2(transform.position.x - 2, transform.position.y), difference.normalized, 10f);
+            new Vector2(transform.position.x -2, transform.position.y), difference.normalized, 10f);
 
         Debug.DrawRay(new Vector2(transform.position.x - 1,
             transform.position.y), difference.normalized * 10f, Color.red);
