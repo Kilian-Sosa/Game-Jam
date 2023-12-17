@@ -415,6 +415,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2265596766684403868, guid: b3006d8d5e9cfd246a148e3d6783be50, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2093469561}
+    - target: {fileID: 2265596766684403868, guid: b3006d8d5e9cfd246a148e3d6783be50, type: 3}
       propertyPath: currentLevelFrame
       value: 
       objectReference: {fileID: 246402347}
