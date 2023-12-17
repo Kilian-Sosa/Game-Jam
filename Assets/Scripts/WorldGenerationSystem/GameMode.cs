@@ -66,9 +66,7 @@ public class GameMode : MonoBehaviour
         if (experience > experienceNeeded && playerLevel < 1)
         {
             PlayerLevelUp();
-            experience = experience % experienceNeeded;
         }
-        Debug.Log("Experience: " + experience);
     }
 
 
