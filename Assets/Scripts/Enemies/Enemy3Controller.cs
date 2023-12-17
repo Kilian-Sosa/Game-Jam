@@ -24,4 +24,9 @@ public class EnemyController : MonoBehaviour {
         //GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("enemyShot");
         new WaitForSeconds(2.5f);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) GameMode.Instance.PlayerDeath();
+    }
 }
