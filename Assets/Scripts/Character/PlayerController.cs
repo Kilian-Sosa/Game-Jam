@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour
         if(puedeMover) Movimiento();
         if (Input.GetKeyDown("space")) Saltar();
         if (Input.GetButtonDown("Fire1")) Atacar();
-        if (GetComponent<Rigidbody2D>().velocity.y == 0)
-            SetAnimation(GetComponent<Rigidbody2D>().velocity.x != 0 ? "run" : "idle");
     }
 
     private void FixedUpdate()
@@ -52,6 +50,10 @@ public class PlayerController : MonoBehaviour
             {
                 contadorSalto = 0;
                 grounded = true;
+                SetAnimation(GetComponent<Rigidbody2D>().velocity.x != 0 ? "run" : "idle");
+            }else
+            {
+                SetAnimation("jump");
             }
         }
     }
@@ -99,14 +101,11 @@ public class PlayerController : MonoBehaviour
             rigidBody.velocity = Vector2.zero;
             rigidBody.AddForce(direccion * velocidadDeMovimiento + Vector2.up * fuerzaDeSalto, ForceMode2D.Impulse);
             contadorSalto++;
-            SetAnimation("jump");
         }
     }
 
     public void LevelUp()
     {
-        SetAnimation("lvlup");
-        //WaitForSeconds(1f);
         animator.runtimeAnimatorController = controller;
     }
 
