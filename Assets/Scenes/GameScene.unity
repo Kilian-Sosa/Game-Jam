@@ -1532,6 +1532,14 @@ PrefabInstance:
       propertyPath: previousLevelFrame
       value: 
       objectReference: {fileID: 274836776}
+    - target: {fileID: 2265596766684403868, guid: b3006d8d5e9cfd246a148e3d6783be50, type: 3}
+      propertyPath: Level1Frames.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265596766684403868, guid: b3006d8d5e9cfd246a148e3d6783be50, type: 3}
+      propertyPath: Level1Frames.Array.data[4]
+      value: 
+      objectReference: {fileID: 3835392979691812947, guid: f3c80be9904c34d41b2a55b12b1e8241, type: 3}
     - target: {fileID: 4578826537287217207, guid: b3006d8d5e9cfd246a148e3d6783be50, type: 3}
       propertyPath: m_Name
       value: Game
