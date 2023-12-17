@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour {
 
     private void Shoot() {
         if (bullet != null) return;
-
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySFX("CatShoot");
         bullet = Instantiate(bulletEnemyPrefab, new Vector2(transform.position.x, transform.position.y +0.55f), Quaternion.identity);
         //GameObject.Find("SoundManager").GetComponent<SoundManager>().PlayAudio("enemyShot");
         new WaitForSeconds(2.5f);

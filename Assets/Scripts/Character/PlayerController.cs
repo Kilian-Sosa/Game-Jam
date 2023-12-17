@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
 
     public void LevelUp()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySFX("LevelUp");
         puedeMover = false;
         StartCoroutine(LevelUpAnimation());
         MaxSaltos++;
@@ -120,6 +121,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDeath()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySFX("PlayerDeath");
         puedeMover = false;
         SceneManager.LoadScene("GameOver");
     }

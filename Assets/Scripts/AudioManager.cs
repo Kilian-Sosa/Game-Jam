@@ -27,13 +27,18 @@ public class AudioManager : MonoBehaviour
     {
         sfxClips["Enemy2Death"] = Resources.Load<AudioClip>("SFX/EyeDeath");
         sfxClips["Enemy2Move"] = Resources.Load<AudioClip>("SFX/EyeMovement");
+        sfxClips["CatShoot"] = Resources.Load<AudioClip>("SFX/CatShoot");
         sfxClips["PlayerDeath"] = Resources.Load<AudioClip>("SFX/PlayerDeath");
+        sfxClips["LevelUp"] = Resources.Load<AudioClip>("SFX/LevelUp");
+        sfxClips["ButtonClick"] = Resources.Load<AudioClip>("SFX/ButtonClick");
     }
 
     private void LoadMusicClips()
     {
         musicClips["MainTheme"] = Resources.Load<AudioClip>("Music/MainTheme");
         musicClips["TitleTheme"] = Resources.Load<AudioClip>("Music/TitleTheme");
+        musicClips["ControlTheme"] = Resources.Load<AudioClip>("Music/ControlTheme");
+        musicClips["CreditsTheme"] = Resources.Load<AudioClip>("Music/CreditsTheme");
     }
 
     public void PlaySFX(string clipName)
