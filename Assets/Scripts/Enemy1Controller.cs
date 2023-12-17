@@ -1,5 +1,3 @@
-using Unity.Burst.CompilerServices;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Enemy1Controller : MonoBehaviour {
