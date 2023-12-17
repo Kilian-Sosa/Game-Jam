@@ -80,6 +80,7 @@ public class GameMode : MonoBehaviour
     private GameObject GetNextFrameClass()
     {
         int randomIndex = Random.Range(0, LevelFrames[playerLevel].Count);
-        return LevelFrames[playerLevel][randomIndex];
+        //return LevelFrames[playerLevel][randomIndex];
+        return LevelFrames[0][randomIndex];
     }
 }
