@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1f);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, 1.5f);
         foreach (RaycastHit2D hit in hits)
         {
             if (hit.collider.CompareTag("Ground") || hit.collider.CompareTag("Enemy"))
@@ -66,11 +67,11 @@ public class PlayerController : MonoBehaviour
 
     private void Atacar()
     {
-        //List<GameObject> Enemies = AttackTriggerBox.GetComponent<AttackTriggerBox>().GetEnemies();
-        //foreach(GameObject Enemy in Enemies)
-        //{
-        //    if(Enemy) Enemy.GetComponent<EnemyStats>().TakeDamage(playerDamage);
-        //}
+        List<GameObject> Enemies = AttackTriggerBox.GetComponent<AttackTriggerBox>().GetEnemies();
+        foreach(GameObject Enemy in Enemies)
+        {
+           if(Enemy) Enemy.GetComponent<EnemyStats>().TakeDamage(playerDamage);
+        }
         SetAnimation("attack");
     }
 

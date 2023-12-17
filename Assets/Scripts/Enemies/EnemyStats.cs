@@ -13,7 +13,7 @@ public class EnemyStats : MonoBehaviour
         if (health <= 0)
         {
             GameMode.Instance.AddExperience(experience);
-            Destroy(gameObject);
+            transform.position = new Vector3(10000, 10000, 10000);
         }
     }
 

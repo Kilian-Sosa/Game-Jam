@@ -4,36 +4,53 @@ public class Enemy1Controller : MonoBehaviour {
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float moveDistance = 3f;
 
-    private Vector2 initialPosition;
-    private bool direction = true;
+    private Vector2 leftPosition;
+    private Vector2 rightPosition;
+    private bool MoveTowardsRight = true;
     private SpriteRenderer spriteRenderer;
 
     void Start() {
-        initialPosition = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        CalculateLeftPosition();
+        CalculateRightPosition();
+    }
+
+    private void CalculateLeftPosition()
+    {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.left, moveDistance + 1);
+        foreach (RaycastHit2D hit in hits ) { 
+            if (hit.collider.CompareTag("Ground"))
+            {
+                leftPosition = hit.point;
+                return;
+            }
+        }
+        leftPosition = transform.position + new Vector3(transform.position.x - moveDistance, 0, 0);
+    }
+
+    private void CalculateRightPosition()
+    {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.right, moveDistance);
+        foreach (RaycastHit2D hit in hits)
+        {
+            if (hit.collider.CompareTag("Ground"))
+            {
+                rightPosition = hit.point;
+                return;
+            }
+        }
+        rightPosition = transform.position + new Vector3(transform.position.x + moveDistance, 0, 0);
     }
 
     void Update() {
-        RaycastHit2D hit = Physics2D.Raycast(
-            new Vector2(transform.position.x + 1, transform.position.y), new Vector2(1f, 0), 1f);
-        if (direction) {
-            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+        Vector2 endposition = MoveTowardsRight ? rightPosition : leftPosition;
+        float direction = endposition.x < transform.position.x ? transform.position.x + -moveSpeed * Time.deltaTime : transform.position.x + moveSpeed * Time.deltaTime;
 
-            if (transform.position.x >= initialPosition.x + moveDistance)
-                direction = false;
-            spriteRenderer.flipX = false;
-        } else {
-            hit = Physics2D.Raycast(
-            new Vector2(transform.position.x - 1, transform.position.y), new Vector2(-1f, 0), 1f);
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-
-            if (transform.position.x <= initialPosition.x - moveDistance)
-                direction = true;
-
-            spriteRenderer.flipX = true;
+        transform.position = new Vector2(direction, transform.position.y);
+        if (Vector2.Distance(transform.position, endposition) < 1f) {
+            MoveTowardsRight = !MoveTowardsRight;
+            spriteRenderer.flipX = !spriteRenderer.flipX;
         }
-
-        if (hit.collider != null && !hit.collider.CompareTag("Player")) direction = !direction;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
