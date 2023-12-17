@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerController : MonoBehaviour
 {
@@ -122,6 +124,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDeath()
     {
+        PlayerPrefs.SetInt("score", GameMode.Instance.getPlayerExperience());
         GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySFX("PlayerDeath");
         puedeMover = false;
         SceneManager.LoadScene("GameOver");
