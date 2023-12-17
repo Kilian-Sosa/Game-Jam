@@ -105,6 +105,8 @@ public class PlayerController : MonoBehaviour
 
     public void LevelUp()
     {
+        SetAnimation("lvlup");
+        //WaitForSeconds(1f);
         animator.runtimeAnimatorController = controller;
     }
 
