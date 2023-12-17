@@ -47,7 +47,6 @@ public class GameMode : MonoBehaviour
     public void PlayerDeath()
     {
         Player.GetComponent<PlayerController>().PlayerDeath();
-
     }
 
     public void GenerateNextLevelFrame()
