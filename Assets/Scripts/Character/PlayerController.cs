@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -69,11 +66,12 @@ public class PlayerController : MonoBehaviour
 
     private void Atacar()
     {
-        List<GameObject> Enemies = AttackTriggerBox.GetComponent<AttackTriggerBox>().GetEnemies();
-        foreach(GameObject Enemy in Enemies)
-        {
-            if(Enemy) Enemy.GetComponent<EnemyStats>().TakeDamage(playerDamage);
-        }
+        //List<GameObject> Enemies = AttackTriggerBox.GetComponent<AttackTriggerBox>().GetEnemies();
+        //foreach(GameObject Enemy in Enemies)
+        //{
+        //    if(Enemy) Enemy.GetComponent<EnemyStats>().TakeDamage(playerDamage);
+        //}
+        SetAnimation("attack");
     }
 
     private void Movimiento()
