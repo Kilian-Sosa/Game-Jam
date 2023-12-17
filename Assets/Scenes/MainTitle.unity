@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 792431460}
   - component: {fileID: 792431459}
   - component: {fileID: 792431458}
+  - component: {fileID: 792431462}
+  - component: {fileID: 792431461}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -243,6 +245,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792431456}
   m_CullTransparentMesh: 1
+--- !u!114 &792431461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792431456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80988f9f1f29a604bba2a5cab37f7251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &792431462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792431456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 792431461}
+          m_TargetAssemblyTypeName: ChangeButton, Assembly-CSharp
+          m_MethodName: CambiarSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: a006a1cab5d58de45a1213b12a08c12e, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 792431461}
+          m_TargetAssemblyTypeName: ChangeButton, Assembly-CSharp
+          m_MethodName: CambiarSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 134a64e3ec179af4087261522f8bd1fe, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1035279713
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 861f191d62c690349981f0f73de92b1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31241125479368e44943ca421d5d5ae6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -620,8 +679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fc03c749c485f4429571fbb2af671d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteNormal: {fileID: 21300000, guid: 2a35f14d0da110a4e8495c8500766ddf, type: 3}
-  spriteHover: {fileID: 21300000, guid: 861f191d62c690349981f0f73de92b1c, type: 3}
+  spriteNormal: {fileID: 21300000, guid: 31241125479368e44943ca421d5d5ae6, type: 3}
+  spriteHover: {fileID: 21300000, guid: 5dbfca93999f2de48818dd4fb8a41ae9, type: 3}
 --- !u!114 &1555391849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +703,7 @@ MonoBehaviour:
           m_MethodName: CambiarSprite
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: 2a35f14d0da110a4e8495c8500766ddf, type: 3}
+            m_ObjectArgument: {fileID: 21300000, guid: 5dbfca93999f2de48818dd4fb8a41ae9, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -660,7 +719,7 @@ MonoBehaviour:
           m_MethodName: CambiarSprite
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: 861f191d62c690349981f0f73de92b1c, type: 3}
+            m_ObjectArgument: {fileID: 21300000, guid: 31241125479368e44943ca421d5d5ae6, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
