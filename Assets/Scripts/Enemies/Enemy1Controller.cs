@@ -61,6 +61,10 @@ public class Enemy1Controller : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) GameMode.Instance.PlayerDeath();
+
+        if (collision.CompareTag("Player"))
+        {
+            GameMode.Instance.PlayerDeath();
+        }
     }
 }

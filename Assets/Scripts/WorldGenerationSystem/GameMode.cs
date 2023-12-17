@@ -46,6 +46,7 @@ public class GameMode : MonoBehaviour
 
     public void PlayerDeath()
     {
+        Debug.Log("playerdeath");
         Player.GetComponent<PlayerController>().PlayerDeath();
     }
 

@@ -11,6 +11,7 @@ public class BulletController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
+            Debug.Log("Bullet");
             GameMode.Instance.PlayerDeath();
             //GameObject.Find("SoundManager").GetComponent<soundManager>().PlayAudio("collision");
             Destroy(gameObject);
