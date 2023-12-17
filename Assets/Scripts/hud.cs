@@ -19,7 +19,7 @@ public class hud : MonoBehaviour
     void Update()
     {
         //RECUERDA QUE HEMOS LLAMADO LOS OBJETOS Score Y Balas EN LA VISTA
-        GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text = "Score: " + GameMode.Instance.getPlayerExperience(); ;
+        GameObject.Find("Score").GetComponent<TextMeshProUGUI>().text = "Score: " + GameMode.Instance.getPlayerExperience();
 
         //PARA EVITAR EL ERROR EN LA ESCENA DE "LOSE"
         if (GameObject.Find("Puntos") != null)

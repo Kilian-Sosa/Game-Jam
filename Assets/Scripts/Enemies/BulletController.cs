@@ -1,25 +1,19 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BulletController : MonoBehaviour {
-    [SerializeField] float bulletSpeed = 20f;
+    [SerializeField] float bulletSpeed = 1f;
 
     void Start() {
         Vector2 difference = GameObject.Find("Player").transform.position - transform.position;
         GetComponent<Rigidbody2D>().velocity = difference.normalized * bulletSpeed;
-        Destroy(gameObject, 1.5f);
-    }
-
-    void Update() {
-        if (transform.position.x < GameObject.Find("Player").GetComponent<Transform>().position.x) {
-            //hud.score++;
-        }
+        Destroy(gameObject, 2.5f);
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Player") {
+            GameMode.Instance.PlayerDeath();
             //GameObject.Find("SoundManager").GetComponent<soundManager>().PlayAudio("collision");
-            //SceneManager.LoadScene("Lose", LoadSceneMode.Single);
-        }
+            Destroy(gameObject);
+        } else if(collision.CompareTag("Ground")) Destroy(gameObject);
     }
 }
