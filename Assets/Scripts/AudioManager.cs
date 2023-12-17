@@ -60,7 +60,7 @@ public class AudioManager : MonoBehaviour
         }
         else Debug.LogWarning("El AudioClip " + clipName + " no se encontró en el diccionario de musicClips.");
 
-        musicSource.loop = (clipName == "MainTheme") ? true : false;
+        musicSource.loop = true;
     }
 
 }

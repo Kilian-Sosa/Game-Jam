@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMusic("TitleTheme");
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
 
     public void playGame()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlayMusic("MainTheme");
         SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
-        Debug.Log("CARAGA ESCENA");
     }
 }
