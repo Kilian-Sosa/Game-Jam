@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 1072349683449122768}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,12 +283,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2914532852437863603}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.53, y: -1.67, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14000034, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2679691272536270743}
+  m_Father: {fileID: 4246877012583971426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1072349683449122768
 BoxCollider2D:
@@ -448,7 +448,8 @@ Transform:
   m_LocalPosition: {x: 3.67, y: -1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3471814742008693789}
   m_Father: {fileID: 2679691272536270743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8441111182137105810
@@ -3411,6 +3412,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 37
       objectReference: {fileID: 0}
+    - target: {fileID: 9131497697785464525, guid: 5034ff8259c961748bc918d8c74c79b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.58
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3429,9 +3434,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2938348011804945913, guid: 5034ff8259c961748bc918d8c74c79b9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4246877012583971426}
-    - targetCorrespondingSourceObject: {fileID: 2938348011804945913, guid: 5034ff8259c961748bc918d8c74c79b9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3471814742008693789}
     - targetCorrespondingSourceObject: {fileID: 2938348011804945913, guid: 5034ff8259c961748bc918d8c74c79b9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2786118909368713039}

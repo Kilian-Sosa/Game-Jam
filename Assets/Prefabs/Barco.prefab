@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPosition: {fileID: 8266367867467595660}
   EndPosition: {fileID: 2899176421811138404}
-  Velocidad: 25
+  Velocidad: 2
 --- !u!1 &8266367867467595660
 GameObject:
   m_ObjectHideFlags: 0
