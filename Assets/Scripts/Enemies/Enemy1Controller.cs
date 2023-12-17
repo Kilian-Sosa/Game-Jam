@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy1Controller : MonoBehaviour {
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float moveDistance = 3f;
+    [SerializeField] float moveDistance = 2f;
 
     private Vector2 leftPosition;
     private Vector2 rightPosition;
@@ -13,7 +13,7 @@ public class Enemy1Controller : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         CalculateLeftPosition();
         CalculateRightPosition();
-        spriteRenderer.flipX = !spriteRenderer.flipX;
+        Flip();
     }
 
     private void CalculateLeftPosition()
@@ -49,9 +49,14 @@ public class Enemy1Controller : MonoBehaviour {
 
         transform.position = new Vector2(direction, transform.position.y);
         if (Vector2.Distance(transform.position, endposition) < 1f) {
-            MoveTowardsRight = !MoveTowardsRight;
-            spriteRenderer.flipX = !spriteRenderer.flipX;
+            Flip();
         }
+    }
+
+    private void Flip()
+    {
+        MoveTowardsRight = !MoveTowardsRight;
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
