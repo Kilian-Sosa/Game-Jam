@@ -106,7 +106,15 @@ public class PlayerController : MonoBehaviour
 
     public void LevelUp()
     {
+        puedeMover = false;
+        StartCoroutine(LevelUpAnimation());
+    }
+
+    private IEnumerator LevelUpAnimation() {
         animator.runtimeAnimatorController = controller;
+        yield return new WaitForSeconds(0.5f);
+        puedeMover = true;
+        StopCoroutine(LevelUpAnimation());
     }
 
     public void PlayerDeath()
