@@ -28,6 +28,11 @@ public class Enemy2Controller : MonoBehaviour {
                 direction = true;
         }
 
-        if (hit.collider != null) direction = !direction;
+        if (hit.collider != null && !hit.collider.CompareTag("Player")) direction = !direction;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) GameMode.Instance.PlayerDeath();
     }
 }
