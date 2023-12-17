@@ -6,6 +6,6 @@ public class PlayAgain : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)) SCManager.instance.LoadScene("GameScene");
+        if (Input.GetKeyDown(KeyCode.Space)) SCManager.instance.LoadScene("GameScene");
     }
 }

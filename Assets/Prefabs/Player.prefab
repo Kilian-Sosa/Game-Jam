@@ -103,8 +103,7 @@ GameObject:
   - component: {fileID: 4787497256440106622}
   - component: {fileID: 5549126805905475578}
   - component: {fileID: 1746215189923728851}
-  - component: {fileID: 3922396021206761292}
-  - component: {fileID: 412092258735173307}
+  - component: {fileID: 2912622709977657233}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -222,7 +221,7 @@ MonoBehaviour:
   direccion: {x: 0, y: 0}
   contadorSalto: 0
   AttackTriggerBox: {fileID: 8315876268200798679}
-  animator: {fileID: 3922396021206761292}
+  animator: {fileID: 2912622709977657233}
   controller: {fileID: 9100000, guid: 0a14f91ddf5a07f478e648e83b91521d, type: 2}
 --- !u!70 &1746215189923728851
 CapsuleCollider2D:
@@ -259,7 +258,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.2826739}
   m_Size: {x: 0.5, y: 1.1746522}
   m_Direction: 0
---- !u!95 &3922396021206761292
+--- !u!95 &2912622709977657233
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -269,7 +268,7 @@ Animator:
   m_GameObject: {fileID: 8681614512027611761}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e0948565e92a6874990bb9f0dc68d361, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0a14f91ddf5a07f478e648e83b91521d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -280,38 +279,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!70 &412092258735173307
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8681614512027611761}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8a1637d733ca1ef4ca70d13277c275e4, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2826739}
-  m_Size: {x: 0.5, y: 1.1746522}
-  m_Direction: 0

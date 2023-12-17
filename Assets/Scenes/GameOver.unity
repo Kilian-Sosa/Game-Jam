@@ -888,7 +888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press ENTER to PLAY  AGAIN
+  m_text: Press SPACE to PLAY AGAIN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14994edf1f16f4e4da447bab98f8c376, type: 2}
   m_sharedMaterial: {fileID: 6018782454584771547, guid: 14994edf1f16f4e4da447bab98f8c376, type: 2}
