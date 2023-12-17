@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  experience: 20
+  experience: 15
 --- !u!61 &4735322480710862712
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -62,7 +62,7 @@ public class GameMode : MonoBehaviour
     public void AddExperience(int amount)
     {
         experience += amount;
-        int experienceNeeded = (playerLevel + 1 * 50);
+        int experienceNeeded = (playerLevel + 1 * 100);
         if (experience > experienceNeeded && playerLevel < 1)
         {
             PlayerLevelUp();
