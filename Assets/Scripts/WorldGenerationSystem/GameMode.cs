@@ -12,9 +12,10 @@ public class GameMode : MonoBehaviour
     private List<List<GameObject>> LevelFrames = new List<List<GameObject>>();
 
     [SerializeField] private GameObject currentLevelFrame;
-    [SerializeField]private GameObject previousLevelFrame;
+    [SerializeField] private GameObject previousLevelFrame;
     [SerializeField] private GameObject BackCollisionBox;
 
+    [SerializeField] private GameObject Player;
     private int playerLevel;
     private int experience;
 
@@ -40,6 +41,13 @@ public class GameMode : MonoBehaviour
     {
         playerLevel++;
         if (playerLevel > 2) playerLevel = 2;
+        Player.GetComponent<PlayerController>().LevelUp();
+    }
+
+    public void PlayerDeath()
+    {
+        Player.GetComponent<PlayerController>().PlayerDeath();
+
     }
 
     public void GenerateNextLevelFrame()

@@ -103,8 +103,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void LevelUp()
+    public void LevelUp()
     {
         animator.runtimeAnimatorController = controller;
+    }
+
+    public void PlayerDeath()
+    {
+
     }
 }
