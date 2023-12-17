@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject AttackTriggerBox;
     private int playerDamage = 1;
-    private int MaxSaltos = 0;
+    private int MaxSaltos = 1;
 
     [SerializeField] private Animator animator;
     [SerializeField] private RuntimeAnimatorController controller;
