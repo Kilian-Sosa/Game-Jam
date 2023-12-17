@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -108,6 +110,7 @@ public class PlayerController : MonoBehaviour
     {
         puedeMover = false;
         StartCoroutine(LevelUpAnimation());
+        MaxSaltos++;
     }
 
     private IEnumerator LevelUpAnimation() {
@@ -119,6 +122,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDeath()
     {
-        Destroy(gameObject);
+        puedeMover = false;
+        SceneManager.LoadScene("GameOver");
     }
 }
