@@ -13,6 +13,7 @@ public class Enemy1Controller : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         CalculateLeftPosition();
         CalculateRightPosition();
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
     private void CalculateLeftPosition()
