@@ -31,6 +31,7 @@ public class AudioManager : MonoBehaviour
         sfxClips["PlayerDeath"] = Resources.Load<AudioClip>("SFX/PlayerDeath");
         sfxClips["LevelUp"] = Resources.Load<AudioClip>("SFX/LevelUp");
         sfxClips["ButtonClick"] = Resources.Load<AudioClip>("SFX/ButtonClick");
+        sfxClips["Attack"] = Resources.Load<AudioClip>("SFX/Attack");
     }
 
     private void LoadMusicClips()

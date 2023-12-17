@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
 
     private void Atacar()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().PlaySFX("Attack");
         List<GameObject> Enemies = AttackTriggerBox.GetComponent<AttackTriggerBox>().GetEnemies();
         foreach(GameObject Enemy in Enemies)
         {
